@@ -1,2 +1,3 @@
-def search(args):
-    print("do search")
+def main(args):
+    print("search")
+    print(args)

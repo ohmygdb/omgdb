@@ -1,2 +1,3 @@
-def update(args):
-    print("doing update")
+def main(args):
+    print("update")
+    print(args)

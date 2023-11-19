@@ -1,2 +1,3 @@
-def enable(args):
-    print("enable modules")
+def main(args):
+    print("enable")
+    print(args)

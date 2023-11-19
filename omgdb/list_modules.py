@@ -1,2 +1,3 @@
-def list_modules(args):
-    print("Available modules: ")
+def main(args):
+    print("list_modules")
+    print(args)

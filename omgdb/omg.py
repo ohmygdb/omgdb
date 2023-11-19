@@ -8,7 +8,7 @@ def main():
         prog=os.path.splitext(os.path.basename(sys.argv[0]))[0],
         description="Oh my GDB, an extension manager for gdb")
     valid_cmds=omgdb.run_cmd.valid_commands
-    parser.add_argument('command', nargs='+',
+    parser.add_argument('command', nargs='+', 
                         help="subcommand, available comands: %s"%(', '.join(valid_cmds)))
     args = parser.parse_args()
     cmd=args.command
