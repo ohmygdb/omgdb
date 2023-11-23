@@ -10,12 +10,15 @@ def main():
     valid_cmds=omgdb.run_cmd.valid_commands
     parser.add_argument('command', nargs='+', 
                         help="subcommand, available comands: %s"%(', '.join(valid_cmds)))
+    parser.add_argument('-i','--interactive', action='store_true', default=False,
+                        help="Run subcommand interactively")
     args = parser.parse_args()
-    cmd=args.command
-    if cmd[0] == "help":
+    if args.command[0] == "help":
         parser.print_help()
-        return
-    omgdb.run_cmd.run_cmd(cmd)
+        exit(0)
+    omgdb.run_cmd.run_cmd(cmd=args.command[0],
+                          interactive=args.interactive,
+                          argv=args.command[1:])
 
 if __name__=="__main__":
     main()

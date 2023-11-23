@@ -1,3 +1,3 @@
-def main(args):
+def main(**kwargs):
     print("update")
-    print(args)
+    print(kwargs)

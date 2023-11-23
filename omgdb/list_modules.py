@@ -1,3 +1,3 @@
-def main(args):
+def main(**kwargs):
     print("list_modules")
-    print(args)
+    print(kwargs)

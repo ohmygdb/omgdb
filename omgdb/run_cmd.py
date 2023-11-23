@@ -14,10 +14,9 @@ commands={ 'init':omgdb.init.main,
            'search':omgdb.search.main }
 valid_commands=list(commands.keys())
 
-def run_cmd(command):
-    cmd=command[0]
-    argv=command[1:]
-    if cmd not in valid_commands:
+def run_cmd(**kwargs):
+    cmd=kwargs['cmd']
+    if cmd not in commands:
         print("Unrecognized command: %s"%(cmd,))
         exit(1)
-    commands[cmd](argv)
+    commands[cmd](**kwargs)

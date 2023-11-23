@@ -1,3 +1,3 @@
-def main(args):
+def main(**kwargs):
     print("disable")
-    print(args)
+    print(kwargs)
