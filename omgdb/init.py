@@ -3,6 +3,8 @@ import inquirer
 import argparse
 import pathlib
 import platform
+
+
 def write_init(path,modules,interactive=False):
     with open(path, 'a') as file:
         pass
